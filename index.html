@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Koupéla Start-Up</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Header & Navigation -->
+  <header class="header">
+    <div class="container">
+      <div class="logo">
+        <h1>Koupéla Start-Up</h1>
+      </div>
+      <nav class="nav">
+        <a href="#accueil" class="nav-link">Accueil</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#actualites" class="nav-link">Actualités</a>
+        <a href="#apropos" class="nav-link">À propos</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="#admin" class="nav-link admin-btn">+ Actualité</a>
+      </nav>
+      <div class="menu-toggle">☰</div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="accueil" class="hero">
+    <div class="hero-content">
+      <h1>Connectons le Kourittenga au monde digital</h1>
+      <p>Agence innovante spécialisée en communication, marketing digital, formation, événementiel, publicité et audiovisuel.</p>
+      <button class="cta-btn" onclick="scrollToSection('contact')">Nous contacter</button>
+      <button class="cta-btn secondary" onclick="scrollToSection('services')">Découvrir nos services</button>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="section">
+    <div class="container">
+      <h2 class="section-title">Nos Services Experts</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="icon">📢</div>
+          <h3>Communication & Marketing Digital</h3>
+          <p>Stratégies digitales sur-mesure, gestion professionnelle des réseaux sociaux, création de contenu engageant et campagnes publicitaires performantes.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🎥</div>
+          <h3>Production Audiovisuelle</h3>
+          <p>Production vidéo haute définition, documentaires professionnels, clips promotionnels et couverture événementielle.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🎓</div>
+          <h3>Coaching & Formation</h3>
+          <p>Formations certifiantes en marketing digital, entrepreneuriat et communication.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🎨</div>
+          <h3>Publicité & Créativité</h3>
+          <p>Création de campagnes publicitaires innovantes, identités visuelles percutantes et supports de communication professionnels.</p>
+        </div>
+        <div class="service-card">
+          <div class="icon">🌍</div>
+          <h3>Innovation & Impact Local</h3>
+          <p>Accompagnement des initiatives locales, projets communautaires et solutions technologiques pour le développement durable du Kourittenga.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Actualités -->
+  <section id="actualites" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Actualités</h2>
+      <div id="news-container" class="news-grid">
+        <!-- Les actualités seront injectées ici -->
+      </div>
+    </div>
+  </section>
+
+  <!-- À propos -->
+  <section id="apropos" class="section">
+    <div class="container">
+      <h2 class="section-title">À propos</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>Nous transformons vos idées en succès digital avec passion et expertise.</p>
+          <p>Basée à Koupéla, notre agence connecte les talents locaux au monde numérique.</p>
+        </div>
+        <div class="about-image">
+          <img src="https://via.placeholder.com/400x300?text=Équipe+Koupéla" alt="Équipe">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section bg-light">
+    <div class="container">
+      <h2 class="section-title">Contactez-nous</h2>
+      <form id="contact-form" class="contact-form">
+        <input type="text" placeholder="Nom" required />
+        <input type="email" placeholder="Email" required />
+        <textarea placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+      <div class="whatsapp-btn">
+        <a href="https://wa.me/226XXXXXXXX" target="_blank">💬 Discuter sur WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Admin Panel (Ajouter Actualité) -->
+  <section id="admin" class="section admin-panel" style="display: none;">
+    <div class="container">
+      <h2 class="section-title">Publier une Actualité</h2>
+      <form id="news-form">
+        <input type="text" id="news-title" placeholder="Titre de l'actualité" required />
+        <textarea id="news-summary" placeholder="Résumé (affiché en aperçu)" required></textarea>
+        <textarea id="news-content" placeholder="Contenu complet (affiché en 'Lire plus')" required></textarea>
+        <input type="text" id="news-image" placeholder="URL de l'image (ou laissez vide)" />
+        <input type="text" id="news-date" placeholder="Date (ex: 10 novembre 2025)" value="11 novembre 2025" />
+        <button type="submit">Publier l'actualité</button>
+      </form>
+      <button onclick="toggleAdmin()" class="close-admin">Fermer</button>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
